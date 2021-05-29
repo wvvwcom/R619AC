@@ -40,7 +40,10 @@ git clone https://github.com/garypang13/luci-theme-edge.git package/lean/luci-th
 sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i "s/Bootstrap/Argon/g" feeds/luci/collections/luci/Makefile
+sed -i "s/bootstrap/argon/g" feeds/luci/collections/luci/Makefile
+sed -i "s/LUCI_DEPENDS/#LUCI_DEPENDS/g" package/lean/luci-app-filetransfer/Makefile
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&

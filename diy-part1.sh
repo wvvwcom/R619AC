@@ -11,7 +11,7 @@
 # src-git kenzo https://github.com/kenzok8/openwrt-packages
 
 # fw876/helloworld
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # sed -i 's@coolsnowwolf/packages@P3TERX/packages@' feeds.conf.default
 
 #获取Lienol-xiaorouji-passwall

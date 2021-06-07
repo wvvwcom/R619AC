@@ -30,7 +30,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/openwrt
-  REPO_BRANCH: master
+  REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: r619ac.config
   DIY_P1_SH: diy-part1.sh

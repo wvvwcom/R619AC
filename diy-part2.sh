@@ -16,6 +16,9 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 # Modify hostname
 sed -i 's/OpenWrt/R619ac/g' package/base-files/files/bin/config_generate
 
+#package r619ac-diy
+rm -rf feeds/lienol/luci-app-control-weburl
+svn co https://github.com/wvvwcom/r619ac_package/trunk/luci-app-control-weburl feeds/lienol/luci-app-control-weburl
 
 
 # 取消bootstrap为默认主题
@@ -38,7 +41,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 
 ##########
 # Modify the version number
-sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/default-settings/files/zzz-default-settings
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile

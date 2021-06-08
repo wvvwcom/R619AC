@@ -32,6 +32,7 @@ rm -rf package/lean/luci-theme-argon
 # agron主题主分支支持openwrt，18.06分支支持lede
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
 # git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat

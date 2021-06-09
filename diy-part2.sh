@@ -52,6 +52,9 @@ sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" pack
 sed -i "s/Bootstrap/Argon/g" feeds/luci/collections/luci/Makefile
 sed -i "s/bootstrap/argon/g" feeds/luci/collections/luci/Makefile
 sed -i "s/LUCI_DEPENDS/#LUCI_DEPENDS/g" package/lean/luci-app-filetransfer/Makefile
+# 默认开启wifi
+sed -i "s/disabled=1/disabled=0" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&

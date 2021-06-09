@@ -45,7 +45,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-a
 
 ##########
 # Modify the version number
-sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /Lienol build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/default-settings/files/zzz-default-settings
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -58,8 +58,8 @@ sed -i "s/disabled=1/disabled=0/g" package/kernel/mac80211/files/lib/wifi/mac802
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
-    echo 'CONFIG_KERNEL_BUILD_USER="Leopard"' >>.config ||
-    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"Leopard"@' .config
+    echo 'CONFIG_KERNEL_BUILD_USER="Lienol"' >>.config ||
+    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"Lienol"@' .config
 
 # Add kernel build domain
 [ -z $(grep "CONFIG_KERNEL_BUILD_DOMAIN=" .config) ] &&

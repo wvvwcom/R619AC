@@ -24,6 +24,9 @@ svn co https://github.com/wvvwcom/r619ac_package/trunk/luci-app-control-weburl f
 # 取消bootstrap为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
+# 删除Lienol自带xray包，默认使用helloworld版本
+rm -rf feeds/packages/net/xray-core
+
 # 删除原主题包
 rm -rf package/lean/luci-theme-argon
 # rm -rf openwrt/package/lean/luci-theme-netgear

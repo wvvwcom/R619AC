@@ -24,11 +24,14 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 # 删除原主题包
 rm -rf package/lean/luci-theme-argon
 # rm -rf openwrt/package/lean/luci-theme-netgear
+# 添加luci-theme-edge主题包
+git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/lean/luci-theme-edge
 
 # 添加新的主题包 
-# agron主题主分支支持openwrt，18.06分支支持lede
+# argon主题主分支支持openwrt，18.06分支支持lede
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
 # git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
@@ -41,10 +44,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
-# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-sed -i "s/Bootstrap/Argon/g" feeds/luci/collections/luci/Makefile
-sed -i "s/bootstrap/argon/g" feeds/luci/collections/luci/Makefile
-sed -i "s/LUCI_DEPENDS/#LUCI_DEPENDS/g" package/lean/luci-app-filetransfer/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-edge/g' feeds/luci/collections/luci/Makefile
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&

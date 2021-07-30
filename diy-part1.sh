@@ -44,5 +44,5 @@ svn co https://github.com/coolsnowwolf/packages/trunk/net/kcptun package/lean/kc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-adbyby-plus package/lean/luci-app-adbyby-plus 
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-autoreboot package/lean/luci-app-autoreboot
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cpufreq package/lean/luci-app-cpufreq
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe package/lean/luci-app-sfe
+# svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe package/lean/luci-app-sfe
 # package from lede end

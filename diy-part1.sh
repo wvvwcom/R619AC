@@ -29,6 +29,10 @@
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 
+# fw876/helloworld
+rm -rf package/helloworld
+git clone https://github.com/fw876/helloworld.git package/helloworld
+
 # package from lienol begin
 rm -rf package/lienol
 git clone https://github.com/Lienol/openwrt-package.git package/lienol

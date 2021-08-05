@@ -37,10 +37,9 @@ git clone https://github.com/fw876/helloworld.git package/helloworld
 rm -rf package/lienol
 git clone https://github.com/Lienol/openwrt-package.git package/lienol
 svn co https://github.com/Lienol/openwrt-luci/trunk/transplant/luci-app-ksmbd package/lienol/luci-app-ksmbd
-# package from lienol end
+
 sed -i 's/translate("Create mask"),/translate("Create mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 sed -i '/translate("Mask for new files")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 sed -i 's/translate("Directory mask"),/translate("Directory mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 sed -i '/translate("Mask for new directories")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua
-
-
+# package from lienol end

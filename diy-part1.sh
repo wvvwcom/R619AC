@@ -38,8 +38,8 @@ rm -rf package/lienol
 git clone https://github.com/Lienol/openwrt-package.git package/lienol
 svn co https://github.com/Lienol/openwrt-luci/trunk/transplant/luci-app-ksmbd package/lienol/luci-app-ksmbd
 svn co https://github.com/small-5/luci-app-adblock-plus/trunk package/lean/luci-app-adblock-plus
-# sed -i 's/translate("Create mask"),/translate("Create mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
-# sed -i '/translate("Mask for new files")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
-# sed -i 's/translate("Directory mask"),/translate("Directory mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
-# sed -i '/translate("Mask for new directories")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua
+sed -i 's/translate("Create mask"),/translate("Create mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
+sed -i '/translate("Mask for new files")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
+sed -i 's/translate("Directory mask"),/translate("Directory mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
+sed -i '/translate("Mask for new directories")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua
 # package from lienol end

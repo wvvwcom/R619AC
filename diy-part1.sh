@@ -34,8 +34,11 @@ rm -rf package/helloworld
 git clone https://github.com/fw876/helloworld.git package/helloworld
 
 # project-lede/luci-app-godproxy
-rm -rf package/luci-app-godproxy
-git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app-godproxy
+# rm -rf package/luci-app-godproxy
+# git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app-godproxy
+# godros/luci-app-ikoolproxy
+rm -rf package/luci-app-ikoolproxy
+git clone https://github.com/godros/luci-app-ikoolproxy package/luci-app-ikoolproxy
 
 # package from lienol begin
 rm -rf package/lienol

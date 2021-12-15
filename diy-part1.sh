@@ -47,3 +47,6 @@ sed -i '/translate("Mask for new files")/d' package/lienol/luci-app-ksmbd/luasrc
 sed -i 's/translate("Directory mask"),/translate("Directory mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 sed -i '/translate("Mask for new directories")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua
 # package from lienol end
+
+# vernesong/OpenClash
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash

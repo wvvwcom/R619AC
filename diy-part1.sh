@@ -49,4 +49,5 @@ sed -i '/translate("Mask for new directories")/d' package/lienol/luci-app-ksmbd/
 # package from lienol end
 
 # vernesong/OpenClash
+rm -rf package/luci-app-openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash

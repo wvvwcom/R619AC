@@ -32,8 +32,8 @@
 # fw876/helloworld
 rm -rf package/helloworld
 git clone https://github.com/fw876/helloworld.git package/helloworld
-# vless节点xtls默认允许不安全连接
-sed -i '/result.xtls = \"1\"/a\\t\t\t\t\tresult.insecure = \"1\"' package/helloworld/luci-app-ssr-plus/root/usr/share/shadowsocksr/subscribe.lua
+# torjan节点默认允许不安全连接
+sed -i 's/result.insecure = \"0\"/result.insecure = \"1\"/g'  package/helloworld/luci-app-ssr-plus/root/usr/share/shadowsocksr/subscribe.lua
 
 # iwrt/luci-app-ikoolproxy
 rm -rf package/luci-app-ikoolproxy

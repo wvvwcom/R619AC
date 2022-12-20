@@ -44,6 +44,7 @@ rm -rf package/lienol
 git clone https://github.com/Lienol/openwrt-package.git package/lienol
 # svn co https://github.com/Lienol/openwrt-luci/trunk/transplant/luci-app-ksmbd package/lienol/luci-app-ksmbd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ksmbd package/lienol/luci-app-ksmbd
+svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-ksmbd package/lienol/autoshare-ksmbd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adbyby-plus package/lienol/luci-app-adbyby-plus
 # sed -i 's/translate("Create mask"),/translate("Create mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 # sed -i '/translate("Mask for new files")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 

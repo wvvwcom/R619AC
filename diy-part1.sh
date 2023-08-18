@@ -13,6 +13,7 @@
 # fw876/helloworld
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # sed -i 's@coolsnowwolf/packages@P3TERX/packages@' feeds.conf.default
+sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
 
 # 删除默认软件
 # sed -i 's/autosamba//g' target/linux/ipq40xx/Makefile
@@ -30,22 +31,22 @@
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 
 # fw876/helloworld
-rm -rf package/helloworld
-git clone https://github.com/fw876/helloworld.git package/helloworld
+# rm -rf package/helloworld
+# git clone https://github.com/fw876/helloworld.git package/helloworld
 # torjan节点默认允许不安全连接
-sed -i 's/result.insecure = \"0\"/result.insecure = \"1\"/g'  package/helloworld/luci-app-ssr-plus/root/usr/share/shadowsocksr/subscribe.lua
+# sed -i 's/result.insecure = \"0\"/result.insecure = \"1\"/g'  package/helloworld/luci-app-ssr-plus/root/usr/share/shadowsocksr/subscribe.lua
 
 # iwrt/luci-app-ikoolproxy
-rm -rf package/luci-app-ikoolproxy
-git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+# rm -rf package/luci-app-ikoolproxy
+# git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 
 # package from lienol begin
-rm -rf package/lienol
-git clone https://github.com/Lienol/openwrt-package.git package/lienol
+# rm -rf package/lienol
+# git clone https://github.com/Lienol/openwrt-package.git package/lienol
 # svn co https://github.com/Lienol/openwrt-luci/trunk/transplant/luci-app-ksmbd package/lienol/luci-app-ksmbd
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ksmbd package/lienol/luci-app-ksmbd
-svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-ksmbd package/lienol/autoshare-ksmbd
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adbyby-plus package/lienol/luci-app-adbyby-plus
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ksmbd package/lienol/luci-app-ksmbd
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-ksmbd package/lienol/autoshare-ksmbd
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adbyby-plus package/lienol/luci-app-adbyby-plus
 # sed -i 's/translate("Create mask"),/translate("Create mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 # sed -i '/translate("Mask for new files")/d' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
 # sed -i 's/translate("Directory mask"),/translate("Directory mask"))/g' package/lienol/luci-app-ksmbd/luasrc/model/cbi/ksmbd.lua 
@@ -53,5 +54,5 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adbyby-plus pa
 # package from lienol end
 
 # vernesong/OpenClash
-rm -rf package/luci-app-openclash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+# rm -rf package/luci-app-openclash
+# svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash

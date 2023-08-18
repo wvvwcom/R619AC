@@ -31,9 +31,9 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  REPO_TAG: 20221001
+  REPO_TAG: 20230609
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: r619ac.config
+  CONFIG_FILE: ax6000.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
